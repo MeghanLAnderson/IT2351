@@ -1,0 +1,3 @@
+
+Start a new MYSql Docker instance
+  docker run --name mlaMySql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
