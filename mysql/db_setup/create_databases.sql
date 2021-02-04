@@ -1,8 +1,9 @@
--- Anderson, Meghan Spring Assignment1Part2
+-- Anderson, Meghan Spring 2021 Assignment1Part2
 
 -- *************************************************************
 -- This script creates all 3 sample databases (AP, EX, and OM)
 -- for Murach's MySQL 3rd Edition by Joel Murach 
+-- Anderson, Meghan Spring IT2351Assignment1Part3A
 -- *************************************************************
 
 -- ********************************************
