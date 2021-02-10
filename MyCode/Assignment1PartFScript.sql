@@ -55,6 +55,7 @@ order by
     customer_first_name;
     
 -- Anderson, Meghan Spring 2021  Assignment1PartH
+-- Formated Dates using m/d/y
 select
 	customer_id "ID",
    date_format (order_date, '%m/%d/%Y') as "Order Date",
