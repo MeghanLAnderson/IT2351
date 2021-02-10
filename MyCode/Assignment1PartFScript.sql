@@ -57,8 +57,8 @@ order by
 -- Anderson, Meghan Spring 2021  Assignment1PartH
 select
 	customer_id "ID",
-    order_date "Order Date",
-    shipped_date "Shipped Date",
+   date_format (order_date, '%m/%d/%Y') as "Order Date",
+    date_format(shipped_date, '%m/%d/%Y') "Shipped Date",
 	shipped_date - order_date "Days_to_Ship"
 from
 	orders
