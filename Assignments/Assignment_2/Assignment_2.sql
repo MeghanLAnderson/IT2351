@@ -32,3 +32,13 @@ ON o.order_id = od.order_id
 ORDER BY o.customer_id
 ;
 
+-- QUERY D 
+-- READ AND UNDERSTAND
+SELECT o.customer_id, o.order_date, i.artist, od.order_qty
+FROM orders o 
+  INNER JOIN order_details od
+  INNER JOIN items i
+ON o.order_id = od.order_id
+  AND i.item_id = od.item_id
+ORDER BY i.artist
+;
