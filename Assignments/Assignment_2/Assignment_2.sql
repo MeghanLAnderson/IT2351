@@ -70,6 +70,6 @@ WHERE customer_state = 'OH'
 
 --Insert a row into the customers table(data of your choice). --Nameyour image and script filesAssignment2Part2
 SELECT
-FROM
+FROM 
 
-
+gregreg
