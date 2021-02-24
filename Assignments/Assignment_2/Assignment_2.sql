@@ -42,3 +42,34 @@ ON o.order_id = od.order_id
   AND i.item_id = od.item_id
 ORDER BY i.artist
 ;
+
+--Once again you will add to the last query replacing --customer_id with customer name.  Add another join that --will accomplish this goal. Name the image and script --files: Assignment2Part2E
+SELECT o.customer_id, o.order_date, i.artist, od.order_qty, c.customer_first_name
+FROM orders o 
+  INNER JOIN order_details od
+  INNER JOIN items i
+  INNER JOIN customers c
+ON o.order_id = od.order_id
+  AND i.item_id = od.item_id
+  AND c.customer_id = o.customer_id
+ORDER BY c.customer_first_name
+;
+
+--Output allthe titles with an order quantity over one. --Name the image and script files: Assignment2Part2F. 
+SELECT i.title, od.order_qty
+FROM items i
+  INNER JOIN order_details od
+ON i.item_id = od.item_id
+WHERE order_qty > 1
+;
+--Output allthe orders for customers in Ohio. Include the customer --names and titles purchasedin your output. Name your image and -script files:Assignment2Part2G
+SELECT concat(customer_first_name, " ", customer_last_name) as Name, customer_state, title
+FROM customers, items
+WHERE customer_state = 'OH'
+;
+
+--Insert a row into the customers table(data of your choice). --Nameyour image and script filesAssignment2Part2
+SELECT
+FROM
+
+
