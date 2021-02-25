@@ -12,6 +12,7 @@ from
 order by 4 asc,3 asc;
 
 -- Anderson, Meghan Spring 2021 Assignment1Part3B
+-- create query to sort unit price
 select
 	title, 
     artist, 
@@ -24,6 +25,7 @@ order by
 	unit_price;
   
 -- Anderson, Meghan Spring 2021 Assignment1Part3C
+-- create a query to use aliases
 select 	
 	customer_first_name "First Name",
 	customer_last_name "Last Name",
@@ -35,6 +37,7 @@ order by
 	2, 1;
 
 -- Anderson, Meghan Spring 2021 Assignment1Part3D
+-- use arithmetic expressions
 select
 	customer_id "ID",
     order_date "Order Date",
@@ -47,6 +50,7 @@ order by
     Days_to_Ship;
    
 -- Anderson, Meghan Spring 2021 Assignment1PartG
+-- use concat function
 select
 	concat(customer_first_name, " ", customer_last_name) as Name
 from customers
