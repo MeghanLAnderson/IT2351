@@ -98,11 +98,8 @@ WHERE c.customer_id = o.customer_id
 --Insert a row into the customers table(data of your choice).
 --Name your image and script files
 -- Assignment2Part2H
-SELECT
-<<<<<<< HEAD
-FROM 
+INSERT INTO customers (customer_id, customer_first_name, customer_last_name, customer_address, customer_city, customer_state, customer_zip, customer_phone)
+ values  (26, 'Benjamin','Rusnak', '21 Main St', 'Springfield', 'OH', 1111, 2165551234)
 
-gregreg
-=======
-FROM
->>>>>>> c45652e13d14e4cfaafc63b55256b25a166497f9
+;
+
