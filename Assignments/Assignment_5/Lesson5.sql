@@ -34,6 +34,12 @@ CREATE TABLE emails (
 CREATE TABLE students (
   student_id        INT            PRIMARY KEY   AUTO_INCREMENT,
   student_first_name VARCHAR(255)   NOT NULL,      
-  student_last_name  VARCHAR(255)   NOT NULL,      
-    
+  student_last_name  VARCHAR(255)   NOT NULL     
 );
+CREATE TABLE addresses (
+  address_id        INT            PRIMARY KEY   AUTO_INCREMENT,
+  address_name      VARCHAR(255)   NOT NULL      UNIQUE,
+  student_id      INT
+  CONSTRAINT addresses_fk_students
+    FOREIGN KEY (student_id)
+    REFERENCES students (student_id)
