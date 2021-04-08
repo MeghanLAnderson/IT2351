@@ -48,5 +48,38 @@ CREATE TABLE addresses (
 -- add data to tables
 INSERT INTO majors (major_name) VALUES
 ('Programming'),
-('Networking'),
+('Networking')
+;
+INSERT INTO classes (class_name) VALUES
+('IT1025'),
+('MATH1200'),
+('IT1050'),
+('IT2351')
+;
+INSERT INTO emails (email) VALUES
+('Joe@school.edu'),
+('Sue@school.edu'),
+('Nick@school.edu'),
+('John@school.edu'),
+('Jane@school.edu'),
+('Connor@school.edu'),
+('Andy@school.edu')
+;
+INSERT INTO addresses (address_name) VALUES
+('124 Main St.'),
+('345 Second St.'),
+('45 York Rd.'),
+('600 5th Ave.'),
+('580 Oak Ln.'),
+('615 Magnolia Blvd.'),
+('167 Eastwood Rd.')
+;
+INSERT INTO students (student_first_name, student_last_name) VALUES
+('Joe','Green'),
+('Sue','Smith'),
+('Nick','Green'),
+('John','Doe'),
+('Jane','Williams'),
+('Andy','Andrews'),
+('Connor','Walters')
 ;
