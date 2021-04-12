@@ -112,10 +112,19 @@ INSERT INTO enrollments(student_id,class_id,majors_id,email_id) VALUES
 ('S7',1,0,7),
 ('S7',4,0,7);
 
-SELECT 
+SELECT S1
 FROM students s
  JOIN enrollments e 
  JOIN majors m
  JOIN classes c 
  JOIN emails em
- JOIN addresses a   
+ JOIN addresses a
+ ;   
+-- create view for guitar database
+CREATE VIEW item_ordered_view AS
+SELECT c.category_name, p.product_name, i.item_price, i.quantity
+FROM categories c
+    JOIN products p 
+    JOIN order_items i
+ON c.category_id = p.category_id
+    AND p.product_id = i.product_id
