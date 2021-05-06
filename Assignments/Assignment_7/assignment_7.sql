@@ -12,12 +12,12 @@ BEGIN
   FROM customers 
   WHERE first_name = f_name 
     AND last_name = l_name;
-  SET FOREIGN_KEY_CHECKS=0;
+  SET FOREIGN_KEY_CHECKS=0;  -- disabled to keep orders (i.e. financial data) but delete customer PII/PID
   DELETE FROM addresses WHERE customer_id = @cid;
   COMMIT;
   DELETE FROM customers WHERE customer_id = @cid;
   COMMIT;
-  SET FOREIGN_KEY_CHECKS=1;
+  SET FOREIGN_KEY_CHECKS=1; -- enable fk restrictions again
 END
 DELIMITER ;
 
