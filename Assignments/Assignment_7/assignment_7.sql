@@ -1,3 +1,44 @@
+-- question 1
+
+-- Given the my_guitar_shop database, remove a customer.
+
+-- Create Stored PROCEDURE 
+DELIMITER $$
+CREATE PROCEDURE remove_customer(IN f_name VARCHAR(60), 
+                                IN l_name VARCHAR(60))
+BEGIN 
+  DECLARE cid INT DEFAULT 0; 
+  SELECT customer_id INTO @cid 
+  FROM customers 
+  WHERE first_name = f_name 
+    AND last_name = l_name;
+  SET FOREIGN_KEY_CHECKS=0;
+  DELETE FROM addresses WHERE customer_id = @cid;
+  COMMIT;
+  DELETE FROM customers WHERE customer_id = @cid;
+  COMMIT;
+  SET FOREIGN_KEY_CHECKS=1;
+END
+DELIMITER ;
+
+-- TEST Remove customer Allan Sherwood
+SELECT * 
+from customers,
+  addresses 
+where customers.customer_id = addresses.customer_id
+  and first_name = 'Allan'
+  and last_name = 'Sherwood'
+;
+CALL remove_customer('Allan','Sherwood');
+
+SELECT * 
+from customers,
+  addresses 
+where customers.customer_id = addresses.customer_id
+  and first_name = 'Allan'
+  and last_name = 'Sherwood'
+;
+
 -- question 2
 USE ap;
 
@@ -92,6 +133,13 @@ CALL test();
 
 -- question 4a
 -- make sure that privileges are as limited as possible for secruity starting with column privileges first and working up the ladder if needed
+ -- Global: Possbily set all users to have READ ACCESS ONLY
+ -- Database: Ensure ONLY the needed databases are accessed
+ --
+ --
+ --      
 -- question 4b
 -- set roles will make it easier to define each person 
+-- give a few example roles you would create (e.g. DEV, SALESMAN, CUSTOMER)
+-- Auto assign roles at user creation
 
