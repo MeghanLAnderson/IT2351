@@ -135,11 +135,10 @@ CALL test();
 -- make sure that privileges are as limited as possible for secruity starting with column privileges first and working up the ladder if needed
  -- Global: Possbily set all users to have READ ACCESS ONLY
  -- Database: Ensure ONLY the needed databases are accessed
- --
- --
- --      
+ -- Tables: Ensure ONLY the needed tables are accessed
+ -- Columns: Ensure ONLY the needed columns are accessed     
 -- question 4b
 -- set roles will make it easier to define each person 
--- give a few example roles you would create (e.g. DEV, SALESMAN, CUSTOMER)
+-- example roles to create (e.g. DEV, SALESMAN, CUSTOMER) to give only what they need to access
 -- Auto assign roles at user creation
 
